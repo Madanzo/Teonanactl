@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ceremonial Earth Palette */
+    --background: 40 30% 97%;
+    --foreground: 30 20% 15%;
+
+    --card: 40 25% 95%;
+    --card-foreground: 30 20% 15%;
+
+    --popover: 40 30% 97%;
+    --popover-foreground: 30 20% 15%;
+
+    /* Terracotta Primary */
+    --primary: 16 65% 45%;
+    --primary-foreground: 40 30% 97%;
+
+    /* Sage Green Secondary */
+    --secondary: 140 25% 75%;
+    --secondary-foreground: 140 30% 20%;
+
+    /* Warm Cream Muted */
+    --muted: 40 20% 90%;
+    --muted-foreground: 30 15% 45%;
+
+    /* Gold Accent */
+    --accent: 42 80% 55%;
+    --accent-foreground: 30 20% 15%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 30% 97%;
+
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 16 65% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --sage: 140 25% 45%;
+    --sage-light: 140 25% 75%;
+    --terracotta: 16 65% 45%;
+    --terracotta-dark: 16 65% 35%;
+    --cream: 40 30% 97%;
+    --earth: 30 20% 15%;
+    --gold: 42 80% 55%;
+    --gold-light: 42 70% 75%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(16 65% 45% / 0.9), hsl(30 40% 25% / 0.95));
+    --gradient-sacred: linear-gradient(180deg, hsl(40 30% 97%), hsl(40 20% 90%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 80% 55%), hsl(42 70% 45%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(30 20% 15% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(30 20% 15% / 0.12);
+    --shadow-gold: 0 4px 20px -4px hsl(42 80% 55% / 0.3);
+
+    --sidebar-background: 40 25% 95%;
+    --sidebar-foreground: 30 20% 15%;
+    --sidebar-primary: 16 65% 45%;
+    --sidebar-primary-foreground: 40 30% 97%;
+    --sidebar-accent: 140 25% 75%;
+    --sidebar-accent-foreground: 30 20% 15%;
+    --sidebar-border: 30 15% 85%;
+    --sidebar-ring: 16 65% 45%;
+  }
+
+  .dark {
+    --background: 30 20% 8%;
+    --foreground: 40 25% 92%;
+
+    --card: 30 18% 12%;
+    --card-foreground: 40 25% 92%;
+
+    --popover: 30 18% 10%;
+    --popover-foreground: 40 25% 92%;
+
+    --primary: 16 60% 55%;
+    --primary-foreground: 30 20% 8%;
+
+    --secondary: 140 20% 25%;
+    --secondary-foreground: 140 25% 85%;
+
+    --muted: 30 15% 18%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 42 70% 50%;
+    --accent-foreground: 30 20% 8%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 40 30% 97%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 16 60% 55%;
+
+    --sidebar-background: 30 18% 10%;
+    --sidebar-foreground: 40 25% 92%;
+    --sidebar-primary: 16 60% 55%;
+    --sidebar-primary-foreground: 30 20% 8%;
+    --sidebar-accent: 140 20% 25%;
+    --sidebar-accent-foreground: 140 25% 85%;
+    --sidebar-border: 30 15% 20%;
+    --sidebar-ring: 16 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .text-display {
+    font-family: 'Cormorant Garamond', serif;
+    @apply text-5xl md:text-7xl font-semibold tracking-tight leading-tight;
+  }
+
+  .text-heading {
+    font-family: 'Cormorant Garamond', serif;
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+  }
+
+  .text-subheading {
+    font-family: 'Cormorant Garamond', serif;
+    @apply text-xl md:text-2xl font-medium;
+  }
+
+  .container-ceremonial {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card-sacred {
+    @apply bg-card rounded-2xl p-6 transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card-sacred:hover {
+    box-shadow: var(--shadow-elevated);
+    @apply -translate-y-1;
+  }
+
+  .btn-ceremonial {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300;
+    @apply bg-primary text-primary-foreground;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-ceremonial:hover {
+    @apply bg-primary/90 scale-105;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .btn-gold {
+    background: var(--gradient-gold);
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300;
+    @apply text-earth;
+    box-shadow: var(--shadow-gold);
+  }
+
+  .btn-gold:hover {
+    @apply scale-105 brightness-110;
+  }
+
+  .badge-sage {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    @apply bg-secondary text-secondary-foreground;
+  }
+
+  .divider-sacred {
+    @apply w-24 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto;
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+}
