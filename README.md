@@ -1,73 +1,135 @@
-# Welcome to your Lovable project
+# 🌿 Teonanactl
 
-## Project info
+**Sacred Path Store** — An e-commerce platform for ceremonial wellness products rooted in Mexican ancestral traditions.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ About
 
-**Use Lovable**
+Teonanactl is a modern e-commerce platform dedicated to ceremonial wellness products, including:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- 🍄 **THC Microdosis** — Traditional formulations for spiritual and wellness practices
+- 🍫 **Cacao Ceremonial** — 100% pure Mexican ceremonial cacao
+- 🎁 **Initiation Kits** — Complete starter sets for ceremonial practices
+- 🌿 **Accessories** — Copal incense and other sacred items
 
-Changes made via Lovable will be committed automatically to this repo.
+The name "Teonanactl" comes from Nahuatl, meaning "sacred flesh" — reflecting our commitment to honoring ancestral Mexican traditions.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Technology | Purpose |
+|------------|---------|
+| **React 18** | UI library with modern hooks |
+| **TypeScript** | Type-safe development |
+| **Vite** | Lightning-fast build tool |
+| **Tailwind CSS** | Utility-first styling |
+| **shadcn/ui** | Beautiful, accessible components |
+| **React Router** | Client-side routing |
+| **React Query** | Data fetching & caching |
+| **Lucide Icons** | Beautiful icon library |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Getting Started
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Prerequisites
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Node.js** 18+ — [Install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **npm** or **bun** package manager
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Madanzo/Teonanactl.git
+
+# Navigate to the project
+cd Teonanactl
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be running at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📁 Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+Teonanactl/
+├── public/              # Static assets
+├── src/
+│   ├── assets/          # Images and media
+│   ├── components/
+│   │   ├── cart/        # Shopping cart components
+│   │   ├── layout/      # Header, Footer
+│   │   ├── shop/        # Product cards
+│   │   └── ui/          # shadcn/ui components
+│   ├── contexts/        # React context (CartContext)
+│   ├── data/            # Product data
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions
+│   ├── pages/           # Route pages
+│   └── types/           # TypeScript types
+├── index.html
+├── tailwind.config.ts
+├── vite.config.ts
+└── package.json
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📜 Available Scripts
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 🎨 Features
 
-## Can I connect a custom domain to my Lovable project?
+- ✅ **Responsive Design** — Mobile-first approach
+- ✅ **Shopping Cart** — Full cart functionality with drawer
+- ✅ **Product Variations** — Support for multiple sizes/quantities
+- ✅ **Product Categories** — Filter by THC, Cacao, Accessories
+- ✅ **Beautiful UI** — Custom ceremonial design system
+- ✅ **Fast Performance** — Optimized with Vite
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🌐 Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is configured for easy deployment on **Vercel**:
+
+1. Connect your GitHub repository to Vercel
+2. Vercel will auto-detect the Vite framework
+3. Deploy with zero configuration
+
+---
+
+## 📄 License
+
+This project is private and proprietary.
+
+---
+
+## 🙏 Acknowledgments
+
+Built with respect for Mexican ancestral traditions and the wisdom of traditional medicine practices.
+
+*"Conexión Sagrada con la Naturaleza"*
