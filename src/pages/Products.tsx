@@ -8,9 +8,9 @@ type CategoryFilter = 'all' | Product['category'];
 
 const categoryLabels: Record<CategoryFilter, string> = {
   all: 'Todos',
-  thc: 'Microdosis',
-  cacao: 'Cacao',
-  accessories: 'Accesorios',
+  microdosis: 'Microdosis',
+  cbd: 'CBD',
+  'thc-oil': 'THC',
 };
 
 const Products = () => {
@@ -28,7 +28,7 @@ const Products = () => {
           <span className="badge-sage mb-4">Nuestra Selección</span>
           <h1 className="text-display text-4xl md:text-5xl mb-4">Productos Ceremoniales</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Descubre nuestra colección de productos para bienestar, 
+            Descubre nuestra colección de productos para bienestar,
             creados con respeto a las tradiciones ancestrales mexicanas.
           </p>
         </div>

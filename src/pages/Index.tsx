@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Leaf, Heart } from 'lucide-react';
-import heroCeremonial from '@/assets/hero-ceremonial.jpg';
+import heroCeremonial from '@/assets/hero-ceremonial-shrooms.png';
 import { products, getFeaturedProducts } from '@/data/products';
 import { ProductCard } from '@/components/shop/ProductCard';
 
@@ -33,7 +33,7 @@ const Index = () => {
               <span className="text-gold-light">con la Naturaleza</span>
             </h1>
             <p className="text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 animate-fade-up delay-200">
-              Productos ceremoniales de bienestar creados con respeto a las tradiciones 
+              Productos ceremoniales de bienestar creados con respeto a las tradiciones
               ancestrales y la más alta calidad para tu camino espiritual.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up delay-300">
@@ -132,7 +132,7 @@ const Index = () => {
         <div className="container-ceremonial text-center">
           <h2 className="text-heading mb-4">¿Listo para tu Camino?</h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-            Únete a nuestra comunidad y recibe guías, consejos y ofertas exclusivas 
+            Únete a nuestra comunidad y recibe guías, consejos y ofertas exclusivas
             para tu práctica ceremonial.
           </p>
           <Link

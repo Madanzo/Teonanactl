@@ -18,7 +18,7 @@ export interface Product {
   description: string;
   longDescription?: string;
   basePrice: number;
-  category: 'thc' | 'cacao' | 'accessories';
+  category: 'microdosis' | 'cbd' | 'thc-oil';
   tags: string[];
   featuredImage: string;
   gallery: string[];

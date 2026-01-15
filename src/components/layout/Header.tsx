@@ -9,8 +9,8 @@ export function Header() {
   const { cart, setIsCartOpen } = useCart();
 
   const navLinks = [
+    { href: '/teonanacatl', label: 'Teonanácatl' },
     { href: '/productos', label: 'Productos' },
-    { href: '/servicios', label: 'Servicios' },
     { href: '/quienes-somos', label: 'Quiénes Somos' },
   ];
 
