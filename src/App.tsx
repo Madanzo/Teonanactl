@@ -13,6 +13,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Teonanacatl from "./pages/Teonanacatl";
 import Sagrado from "./pages/Sagrado";
+import QuienesSomos from "./pages/QuienesSomos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
                 <Route path="/carrito" element={<Cart />} />
                 <Route path="/teonanacatl" element={<Teonanacatl />} />
                 <Route path="/sagrado" element={<Sagrado />} />
+                <Route path="/quienes-somos" element={<QuienesSomos />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

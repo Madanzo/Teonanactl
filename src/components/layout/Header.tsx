@@ -20,9 +20,11 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="font-display text-2xl md:text-3xl font-semibold text-foreground">
-              Teonanácatl
-            </span>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/teonanactl-e8527.firebasestorage.app/o/Logo%2FTEO-logo-principal-BLANCO-scaled.webp?alt=media&token=b281fa51-9453-44e6-ae5e-434a9a9e0d6a"
+              alt="Teonanácatl"
+              className="h-10 md:h-12 w-auto brightness-0"
+            />
           </Link>
 
           {/* Desktop Navigation */}

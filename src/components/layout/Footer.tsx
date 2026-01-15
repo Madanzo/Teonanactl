@@ -9,12 +9,14 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="inline-block mb-4">
-              <span className="font-display text-3xl font-semibold text-foreground">
-                Teonanácatl
-              </span>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/teonanactl-e8527.firebasestorage.app/o/Logo%2FTEO-logo-principal-BLANCO-scaled.webp?alt=media&token=b281fa51-9453-44e6-ae5e-434a9a9e0d6a"
+                alt="Teonanácatl"
+                className="h-12 w-auto brightness-0"
+              />
             </Link>
             <p className="text-muted-foreground max-w-md leading-relaxed">
-              Medicina tradicional mexicana para el bienestar ceremonial. 
+              Medicina tradicional mexicana para el bienestar ceremonial.
               Honrando las tradiciones ancestrales con productos de la más alta calidad.
             </p>
             <div className="flex items-center gap-4 mt-6">
@@ -61,7 +63,7 @@ export function Footer() {
                 <MapPin className="w-4 h-4 mt-1 shrink-0" />
                 <span>Ciudad de México, México</span>
               </div>
-              <a 
+              <a
                 href="mailto:hola@microdosis.shopping"
                 className="hover:text-foreground transition-colors"
               >
