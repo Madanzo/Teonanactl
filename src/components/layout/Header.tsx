@@ -10,6 +10,7 @@ export function Header() {
 
   const navLinks = [
     { href: '/teonanacatl', label: 'Teonanácatl' },
+    { href: '/sagrado', label: 'Sagrado' },
     { href: '/productos', label: 'Productos' },
     { href: '/quienes-somos', label: 'Quiénes Somos' },
   ];
