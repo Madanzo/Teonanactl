@@ -6,19 +6,7 @@ import { ProductVariation } from '@/types/product';
 import { ArrowLeft, Check, ShoppingBag, Minus, Plus } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-// Import product images
-import productThcSagrado from '@/assets/product-thc-sagrado.jpg';
-import productCacao from '@/assets/product-cacao.jpg';
-import productKit from '@/assets/product-kit.jpg';
-
-const productImages: Record<string, string> = {
-  'thc-sagrado-original': productThcSagrado,
-  'cacao-ceremonial': productCacao,
-  'kit-iniciacion': productKit,
-  'thc-luna-llena': productThcSagrado,
-  'microdosis-equilibrio': productThcSagrado,
-  'incienso-copal': productCacao,
-};
+// Image imports removed
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -63,9 +51,9 @@ const ProductDetail = () => {
     setTimeout(() => setIsAdding(false), 1500);
   };
 
-  const imageSrc = productImages[product.id] || product.featuredImage;
+  const imageSrc = product.featuredImage;
 
-  const hasDiscount = selectedVariation?.compareAtPrice && 
+  const hasDiscount = selectedVariation?.compareAtPrice &&
     selectedVariation.compareAtPrice > selectedVariation.price;
 
   return (
@@ -97,8 +85,8 @@ const ProductDetail = () => {
           <div className="flex flex-col">
             <div className="mb-2">
               <span className="text-sm text-muted-foreground uppercase tracking-wider">
-                {product.category === 'thc' ? 'Microdosis' : 
-                 product.category === 'cacao' ? 'Cacao Ceremonial' : 'Accesorios'}
+                {product.category === 'microdosis' ? 'Microdosis Teonanácatl' :
+                  product.category === 'cbd' ? 'CBD Sagrado' : 'THC Sagrado'}
               </span>
             </div>
 

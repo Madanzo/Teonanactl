@@ -2,20 +2,6 @@ import { Link } from 'react-router-dom';
 import { useCart } from '@/contexts/CartContext';
 import { Minus, Plus, Trash2, ArrowLeft, ShoppingBag } from 'lucide-react';
 
-// Import product images
-import productThcSagrado from '@/assets/product-thc-sagrado.jpg';
-import productCacao from '@/assets/product-cacao.jpg';
-import productKit from '@/assets/product-kit.jpg';
-
-const productImages: Record<string, string> = {
-  'thc-sagrado-original': productThcSagrado,
-  'cacao-ceremonial': productCacao,
-  'kit-iniciacion': productKit,
-  'thc-luna-llena': productThcSagrado,
-  'microdosis-equilibrio': productThcSagrado,
-  'incienso-copal': productCacao,
-};
-
 const Cart = () => {
   const { cart, updateQuantity, removeFromCart } = useCart();
 
@@ -81,7 +67,7 @@ const Cart = () => {
                     className="w-full sm:w-32 aspect-square rounded-lg overflow-hidden bg-muted shrink-0"
                   >
                     <img
-                      src={productImages[item.product.id] || item.product.featuredImage}
+                      src={item.product.featuredImage}
                       alt={item.product.name}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />

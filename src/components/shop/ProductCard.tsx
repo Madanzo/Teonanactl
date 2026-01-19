@@ -3,19 +3,7 @@ import { Product } from '@/types/product';
 import { useCart } from '@/contexts/CartContext';
 import { ShoppingBag } from 'lucide-react';
 
-// Import product images
-import productThcSagrado from '@/assets/product-thc-sagrado.jpg';
-import productCacao from '@/assets/product-cacao.jpg';
-import productKit from '@/assets/product-kit.jpg';
-
-const productImages: Record<string, string> = {
-  'thc-sagrado-original': productThcSagrado,
-  'cacao-ceremonial': productCacao,
-  'kit-iniciacion': productKit,
-  'thc-luna-llena': productThcSagrado,
-  'microdosis-equilibrio': productThcSagrado,
-  'incienso-copal': productCacao,
-};
+// Image imports removed
 
 interface ProductCardProps {
   product: Product;
@@ -23,11 +11,11 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
-  
-  const lowestVariation = product.variations.reduce((min, v) => 
+
+  const lowestVariation = product.variations.reduce((min, v) =>
     v.price < min.price ? v : min
   );
-  
+
   const hasDiscount = lowestVariation.compareAtPrice && lowestVariation.compareAtPrice > lowestVariation.price;
   const discountPercent = hasDiscount
     ? Math.round((1 - lowestVariation.price / lowestVariation.compareAtPrice!) * 100)
@@ -47,7 +35,7 @@ export function ProductCard({ product }: ProductCardProps) {
     addToCart(product, lowestVariation);
   };
 
-  const imageSrc = productImages[product.id] || product.featuredImage;
+  const imageSrc = product.featuredImage;
 
   return (
     <Link
@@ -62,7 +50,7 @@ export function ProductCard({ product }: ProductCardProps) {
             alt={product.name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          
+
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-2">
             {product.featured && (
@@ -92,7 +80,7 @@ export function ProductCard({ product }: ProductCardProps) {
               {product.name}
             </h3>
           </div>
-          
+
           <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
             {product.description}
           </p>
