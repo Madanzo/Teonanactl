@@ -72,6 +72,9 @@ src/
 | `Index.tsx` | `/` | Homepage with hero, values, and featured products |
 | `Products.tsx` | `/productos` | Product catalog with category filtering |
 | `ProductDetail.tsx` | `/productos/:slug` | Individual product page with variations |
+| `Teonanacatl.tsx` | `/teonanacatl` | Microdosis product landing page |
+| `Sagrado.tsx` | `/sagrado` | CBD/THC oil products page |
+| `QuienesSomos.tsx` | `/quienes-somos` | About page with founders |
 | `Cart.tsx` | `/carrito` | Full cart page with order summary |
 | `NotFound.tsx` | `*` | 404 error page |
 
@@ -108,25 +111,25 @@ The `ui/` folder contains **49 pre-built components** from shadcn/ui:
 ```typescript
 interface Product {
   id: string;
-  slug: string;                              // URL-friendly name
+  slug: string;                                    // URL-friendly name
   name: string;
   description: string;
   longDescription?: string;
-  basePrice: number;                         // Starting price
-  category: 'thc' | 'cacao' | 'accessories'; // Product category
-  tags: string[];                            // For filtering/display
-  featuredImage: string;
+  basePrice: number;                               // Starting price
+  category: 'microdosis' | 'cbd' | 'thc-oil';     // Product category
+  tags: string[];                                  // For filtering/display
+  featuredImage: string;                           // Firebase Storage URL
   gallery: string[];
-  variations: ProductVariation[];            // Size/quantity options
+  variations: ProductVariation[];                  // Size/quantity options
   trackInventory: boolean;
   status: 'draft' | 'active' | 'archived';
-  featured: boolean;                         // Show on homepage
+  featured: boolean;                               // Show on homepage
 }
 
 interface ProductVariation {
   id: string;
   sku: string;
-  name: string;                    // e.g., "4 unidades", "250g"
+  name: string;                    // e.g., "33 cápsulas", "10ml – 300mg CBD"
   price: number;
   compareAtPrice?: number;         // Original price (for discounts)
   inventoryQuantity: number;
@@ -138,16 +141,16 @@ interface ProductVariation {
 ```
 
 ### Product Categories
-1. **THC** - Microdosis products (THC Sagrado, Luna Llena, Equilibrio)
-2. **Cacao** - Ceremonial cacao products
-3. **Accessories** - Kits, incense, and ceremonial items
+1. **Microdosis** - Teonanácatl mushroom capsules (TEO, NANA, SABIN, NANA SH)
+2. **CBD** - CBD Sagrado Original, San Pedro + CBD
+3. **THC-Oil** - THC Sagrado Original
 
 ### Data Functions (`src/data/products.ts`)
 ```typescript
-products                 // Array of all products
-getProductBySlug(slug)   // Find product by URL slug
-getFeaturedProducts()    // Get products marked as featured
-getProductsByCategory()  // Filter by category
+products                   // Array of all products (7 total)
+getProductBySlug(slug)     // Find product by URL slug
+getFeaturedProducts()      // Get products marked as featured
+getProductsByCategory()    // Filter by category
 ```
 
 ---
