@@ -347,7 +347,7 @@ export const products: Product[] = [
     basePrice: 450,
     category: 'gomitas',
     tags: ['gomitas', 'microdosis', 'artesanal', 'bienestar'],
-    featuredImage: '/src/assets/gomitas-teonanacatl.png',
+    featuredImage: '/gomitas-teonanacatl.png',
     gallery: [],
     variations: [
       {
@@ -380,7 +380,7 @@ export const products: Product[] = [
     basePrice: 650,
     category: 'chocolates',
     tags: ['chocolates', 'microdosis', 'cacao', 'artesanal'],
-    featuredImage: '/src/assets/chocolates-teonanacatl.png',
+    featuredImage: '/chocolates-teonanacatl.png',
     gallery: [],
     variations: [
       {

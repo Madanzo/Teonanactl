@@ -5,7 +5,10 @@ import { ProductCard } from '@/components/shop/ProductCard';
 import heroRealistic from '@/assets/hero-realistic-shrooms.png';
 
 const Teonanacatl = () => {
-    const teoProducts = getProductsByCategory('microdosis');
+    const microProducts = getProductsByCategory('microdosis');
+    const gomitasProducts = getProductsByCategory('gomitas');
+    const chocolatesProducts = getProductsByCategory('chocolates');
+    const teoProducts = [...microProducts, ...gomitasProducts, ...chocolatesProducts];
 
     return (
         <div className="flex flex-col">
