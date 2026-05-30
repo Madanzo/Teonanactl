@@ -69,7 +69,7 @@ const Checkout = () => {
     if (isLocal) {
       return `http://127.0.0.1:5001/teonanactl-e8527/us-central1/${functionName}`;
     }
-    return `https://us-central1-merkad-agency-canvas.cloudfunctions.net/${functionName}`;
+    return `https://us-central1-teonanactl-e8527.cloudfunctions.net/${functionName}`;
   };
 
   if (cart.items.length === 0) {
