@@ -50,6 +50,10 @@ function calculateOrderAmount(cart: any[]) {
 
 export const createPayPalOrder = functions.https.onRequest((req, res) => {
   corsHandler(req, res, async () => {
+    if (req.method === 'OPTIONS') {
+      res.status(204).send('');
+      return;
+    }
     if (req.method !== 'POST') {
       res.status(405).send('Method Not Allowed');
       return;
@@ -100,6 +104,10 @@ export const createPayPalOrder = functions.https.onRequest((req, res) => {
 
 export const capturePayPalOrder = functions.https.onRequest((req, res) => {
   corsHandler(req, res, async () => {
+    if (req.method === 'OPTIONS') {
+      res.status(204).send('');
+      return;
+    }
     if (req.method !== 'POST') {
       res.status(405).send('Method Not Allowed');
       return;

@@ -80,6 +80,10 @@ function calculateOrderAmount(cart) {
 }
 exports.createPayPalOrder = functions.https.onRequest((req, res) => {
     corsHandler(req, res, async () => {
+        if (req.method === 'OPTIONS') {
+            res.status(204).send('');
+            return;
+        }
         if (req.method !== 'POST') {
             res.status(405).send('Method Not Allowed');
             return;
@@ -124,6 +128,10 @@ exports.createPayPalOrder = functions.https.onRequest((req, res) => {
 });
 exports.capturePayPalOrder = functions.https.onRequest((req, res) => {
     corsHandler(req, res, async () => {
+        if (req.method === 'OPTIONS') {
+            res.status(204).send('');
+            return;
+        }
         if (req.method !== 'POST') {
             res.status(405).send('Method Not Allowed');
             return;
