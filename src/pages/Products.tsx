@@ -11,6 +11,8 @@ const categoryLabels: Record<CategoryFilter, string> = {
   microdosis: 'Microdosis',
   cbd: 'CBD',
   'thc-oil': 'THC',
+  gomitas: 'Gomitas',
+  chocolates: 'Chocolates',
 };
 
 const Products = () => {
@@ -26,7 +28,7 @@ const Products = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <span className="badge-sage mb-4">Nuestra Selección</span>
-          <h1 className="text-display text-4xl md:text-5xl mb-4">Productos Ceremoniales</h1>
+          <h1 className="text-display text-4xl md:text-5xl mb-4">La Familia Teonanácatl</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubre nuestra colección de productos para bienestar,
             creados con respeto a las tradiciones ancestrales mexicanas.

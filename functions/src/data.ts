@@ -1,6 +1,4 @@
-import { Product } from '@/types/product';
-
-export const products: Product[] = [
+export const products: any[] = [
   // TEONANÁCATL Products
   {
     id: 'teo-dosis-10',
@@ -376,7 +374,7 @@ export const products: Product[] = [
     slug: 'gomitas-cbd-bienestar-diario',
     name: 'Gomitas CBD - Enfoque y Calma',
     description: 'Gomitas de CBD puro ideales para el alivio del estrés diario y mejora del enfoque mental.',
-    longDescription: 'Encuentra tu equilibrio y mantén la calma con nuestras gomitas de CBD puro de la más alta calidad. Libres de efectos psicoactivos, te ayudan a reducir el estrés del día a día, aliviar la ansiedad leve y mejorar la claridad mental para mantenerte enfocado.',
+    longDescription: 'Encuentra tu equilibrio y mantén la calma con nuestras gomitas de CBD puro de la más alta calidad. Libres de efectos psychoactivos, te ayudan a reducir el estrés del día a día, aliviar la ansiedad leve y mejorar la claridad mental para mantenerte enfocado.',
     basePrice: 350,
     category: 'gomitas',
     tags: ['cbd', 'gomitas', 'calma', 'enfoque'],
@@ -439,14 +437,14 @@ export const products: Product[] = [
   }
 ];
 
-export const getProductBySlug = (slug: string): Product | undefined => {
+export const getProductBySlug = (slug: string): any | undefined => {
   return products.find(p => p.slug === slug);
 };
 
-export const getFeaturedProducts = (): Product[] => {
+export const getFeaturedProducts = (): any[] => {
   return products.filter(p => p.featured && p.status === 'active');
 };
 
-export const getProductsByCategory = (category: Product['category']): Product[] => {
+export const getProductsByCategory = (category: string): any[] => {
   return products.filter(p => p.category === category && p.status === 'active');
 };

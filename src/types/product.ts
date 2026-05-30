@@ -18,7 +18,7 @@ export interface Product {
   description: string;
   longDescription?: string;
   basePrice: number;
-  category: 'microdosis' | 'cbd' | 'thc-oil';
+  category: 'microdosis' | 'cbd' | 'thc-oil' | 'gomitas' | 'chocolates';
   tags: string[];
   featuredImage: string;
   gallery: string[];

@@ -12,6 +12,7 @@ export function Header() {
     { href: '/teonanacatl', label: 'Teonanácatl' },
     { href: '/sagrado', label: 'Sagrado' },
     { href: '/productos', label: 'Productos' },
+    { href: '/eventos', label: 'Eventos' },
     { href: '/quienes-somos', label: 'Quiénes Somos' },
   ];
 

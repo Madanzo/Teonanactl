@@ -7,6 +7,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { AgeVerificationModal } from "@/components/layout/AgeVerificationModal";
 import Index from "./pages/Index";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
@@ -14,6 +15,8 @@ import Cart from "./pages/Cart";
 import Teonanacatl from "./pages/Teonanacatl";
 import Sagrado from "./pages/Sagrado";
 import QuienesSomos from "./pages/QuienesSomos";
+import Eventos from "./pages/Eventos";
+import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,7 @@ const App = () => (
       <CartProvider>
         <Toaster />
         <Sonner />
+        <AgeVerificationModal />
         <BrowserRouter>
           <div className="flex flex-col min-h-screen">
             <Header />
@@ -36,6 +40,8 @@ const App = () => (
                 <Route path="/teonanacatl" element={<Teonanacatl />} />
                 <Route path="/sagrado" element={<Sagrado />} />
                 <Route path="/quienes-somos" element={<QuienesSomos />} />
+                <Route path="/eventos" element={<Eventos />} />
+                <Route path="/checkout" element={<Checkout />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

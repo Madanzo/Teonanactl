@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Shield, Leaf, Heart } from 'lucide-react';
 import { getProductsByCategory } from '@/data/products';
 import { ProductCard } from '@/components/shop/ProductCard';
-import teoHeroImage from '@/assets/hero-ceremonial-shrooms.png';
+import heroRealistic from '@/assets/hero-realistic-shrooms.png';
 
 const Teonanacatl = () => {
     const teoProducts = getProductsByCategory('microdosis');
@@ -13,17 +13,17 @@ const Teonanacatl = () => {
             <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0">
                     <img
-                        src={teoHeroImage}
+                        src={heroRealistic}
                         alt="Teonanácatl - Medicina Sagrada"
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-background" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-green-950/50 to-background" />
                 </div>
 
                 <div className="relative z-10 container-ceremonial text-center px-4 py-20">
                     <div className="max-w-3xl mx-auto">
                         <span className="inline-block badge-sage mb-4 animate-fade-up">
-                            Medicina Tradicional
+                            Medicina Tradicional & Micología
                         </span>
                         <h1 className="text-display text-cream mb-4 animate-fade-up delay-100">
                             TEONANÁCATL
@@ -32,7 +32,7 @@ const Teonanacatl = () => {
                             Habitando Tu Centro
                         </p>
                         <p className="text-lg text-cream/80 max-w-xl mx-auto animate-fade-up delay-200">
-                            Microdosis ceremoniales elaboradas con respeto a las tradiciones ancestrales
+                            Microdosis puras elaboradas con respeto a las tradiciones ancestrales
                             para tu bienestar integral.
                         </p>
                     </div>
@@ -60,7 +60,7 @@ const Teonanacatl = () => {
                             {
                                 icon: Shield,
                                 name: 'DOSIS NANA (.20)',
-                                subtitle: 'En caso de resistencia',
+                                subtitle: 'Dosis más alta en caso de resistencia',
                                 description: 'Con Melena de León y niacina. Para mayor tolerancia.',
                                 color: 'bg-amber-500/10 text-amber-600',
                             },
@@ -73,9 +73,9 @@ const Teonanacatl = () => {
                             },
                             {
                                 icon: Leaf,
-                                name: 'DOSIS NANA SH (.30)',
-                                subtitle: 'Solo hongo',
-                                description: 'Fórmula pura. Sin aditivos adicionales.',
+                                name: 'NANÁ SH* (SOLO HONGO .33)',
+                                subtitle: 'Fórmula pura de solo hongo',
+                                description: 'Fórmula pura sin aditivos adicionales.',
                                 color: 'bg-emerald-500/10 text-emerald-600',
                             },
                         ].map((dose) => (
