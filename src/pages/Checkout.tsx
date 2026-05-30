@@ -64,6 +64,14 @@ const Checkout = () => {
   // Environment variable logic
   const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID || 'test';
 
+  const getBackendUrl = (functionName: string) => {
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (isLocal) {
+      return `http://127.0.0.1:5001/teonanactl-e8527/us-central1/${functionName}`;
+    }
+    return `https://us-central1-merkad-agency-canvas.cloudfunctions.net/${functionName}`;
+  };
+
   if (cart.items.length === 0) {
     return (
       <div className="pt-24 pb-20 container-ceremonial text-center">
@@ -159,7 +167,7 @@ const Checkout = () => {
                   createOrder={async () => {
                     // Call our Firebase Cloud Function to create an order securely
                     try {
-                      const response = await fetch("http://127.0.0.1:5001/teonanactl-e8527/us-central1/createPayPalOrder", {
+                      const response = await fetch(getBackendUrl("createPayPalOrder"), {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
@@ -188,7 +196,7 @@ const Checkout = () => {
                   onApprove={async (data) => {
                      // Capture the order using Firebase Cloud Function
                      try {
-                        const response = await fetch("http://127.0.0.1:5001/teonanactl-e8527/us-central1/capturePayPalOrder", {
+                        const response = await fetch(getBackendUrl("capturePayPalOrder"), {
                            method: "POST",
                            headers: { "Content-Type": "application/json" },
                            body: JSON.stringify({ orderID: data.orderID })
