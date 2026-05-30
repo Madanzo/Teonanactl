@@ -174,7 +174,7 @@ export const products: any[] = [
     basePrice: 300,
     category: 'cbd',
     tags: ['cbd', 'bienestar', 'diario'],
-    featuredImage: '/src/assets/product-sagrado.png',
+    featuredImage: 'https://firebasestorage.googleapis.com/v0/b/teonanactl-e8527.firebasestorage.app/o/Products%2FCBD.png?alt=media&token=30ceaedd-ea70-4b42-ad28-c06f003fadc3',
     gallery: [],
     variations: [
       {
@@ -231,7 +231,7 @@ export const products: any[] = [
     basePrice: 350,
     category: 'cbd',
     tags: ['san-pedro', 'cbd', 'ceremonial'],
-    featuredImage: '/src/assets/product-sagrado.png',
+    featuredImage: 'https://firebasestorage.googleapis.com/v0/b/teonanactl-e8527.firebasestorage.app/o/Products%2FCBD.png?alt=media&token=30ceaedd-ea70-4b42-ad28-c06f003fadc3',
     gallery: [],
     variations: [
       {
@@ -288,7 +288,7 @@ export const products: any[] = [
     basePrice: 450,
     category: 'thc-oil',
     tags: ['thc', 'descanso', 'nocturno'],
-    featuredImage: '/src/assets/product-sagrado.png',
+    featuredImage: 'https://firebasestorage.googleapis.com/v0/b/teonanactl-e8527.firebasestorage.app/o/Products%2FTHC.png?alt=media&token=3abfa27e-389b-4cbe-af3c-8d945b79b939',
     gallery: [],
     variations: [
       {
@@ -337,63 +337,30 @@ export const products: any[] = [
     featured: false
   },
   {
-    id: 'gomitas-thc',
-    slug: 'gomitas-thc-sueno-profundo',
-    name: 'Gomitas THC - Sueño Profundo',
-    description: 'Deliciosas gomitas infusionadas con THC para un sueño reparador y relajación profunda.',
-    longDescription: 'Nuestras gomitas premium infusionadas con THC están diseñadas para ayudarte a conciliar un sueño profundo y un descanso verdaderamente reparador. Formuladas con ingredientes naturales y extractos relajantes, son la alternativa ideal para aliviar la tensión y habitar tu paz al final del día.',
+    id: 'gomitas-teonanacatl',
+    slug: 'gomitas-teonanacatl-microdosis',
+    name: 'Gomitas Teonanácatl (Microdosis)',
+    description: 'Gomitas artesanales orgánicas infundidas con microdosis puras de Teonanácatl para tu bienestar diario.',
+    longDescription: 'Nuestras gomitas premium artesanales están elaboradas con ingredientes orgánicos y enriquecidas con una microdosis controlada de Teonanácatl (0.10g). Son una opción deliciosa, práctica y respetuosa para integrar la medicina de la tierra en tu rutina diaria, ayudando a promover el equilibrio emocional y la claridad mental.',
     basePrice: 450,
     category: 'gomitas',
-    tags: ['thc', 'gomitas', 'descanso', 'bienestar'],
-    featuredImage: 'https://firebasestorage.googleapis.com/v0/b/teonanactl-e8527.firebasestorage.app/o/Products%2FTHC.png?alt=media&token=3abfa27e-389b-4cbe-af3c-8d945b79b939',
+    tags: ['gomitas', 'microdosis', 'artesanal', 'bienestar'],
+    featuredImage: '/src/assets/gomitas-teonanacatl.png',
     gallery: [],
     variations: [
       {
-        id: 'gomitas-thc-10',
-        sku: 'GOM-THC-10',
-        name: 'Frasco 10 piezas',
+        id: 'gomitas-teo-10',
+        sku: 'GOM-TEO-10',
+        name: 'Frasco 10 piezas (Microdosis .10g c/u)',
         price: 450,
         inventoryQuantity: 50,
         attributes: { quantity: 10, unit: 'piezas' }
       },
       {
-        id: 'gomitas-thc-20',
-        sku: 'GOM-THC-20',
-        name: 'Frasco 20 piezas',
+        id: 'gomitas-teo-20',
+        sku: 'GOM-TEO-20',
+        name: 'Frasco 20 piezas (Microdosis .10g c/u)',
         price: 800,
-        inventoryQuantity: 40,
-        attributes: { quantity: 20, unit: 'piezas' }
-      }
-    ],
-    trackInventory: true,
-    status: 'active',
-    featured: true
-  },
-  {
-    id: 'gomitas-cbd',
-    slug: 'gomitas-cbd-bienestar-diario',
-    name: 'Gomitas CBD - Enfoque y Calma',
-    description: 'Gomitas de CBD puro ideales para el alivio del estrés diario y mejora del enfoque mental.',
-    longDescription: 'Encuentra tu equilibrio y mantén la calma con nuestras gomitas de CBD puro de la más alta calidad. Libres de efectos psychoactivos, te ayudan a reducir el estrés del día a día, aliviar la ansiedad leve y mejorar la claridad mental para mantenerte enfocado.',
-    basePrice: 350,
-    category: 'gomitas',
-    tags: ['cbd', 'gomitas', 'calma', 'enfoque'],
-    featuredImage: 'https://firebasestorage.googleapis.com/v0/b/teonanactl-e8527.firebasestorage.app/o/Products%2FCBD.png?alt=media&token=30ceaedd-ea70-4b42-ad28-c06f003fadc3',
-    gallery: [],
-    variations: [
-      {
-        id: 'gomitas-cbd-10',
-        sku: 'GOM-CBD-10',
-        name: 'Frasco 10 piezas',
-        price: 350,
-        inventoryQuantity: 50,
-        attributes: { quantity: 10, unit: 'piezas' }
-      },
-      {
-        id: 'gomitas-cbd-20',
-        sku: 'GOM-CBD-20',
-        name: 'Frasco 20 piezas',
-        price: 650,
         inventoryQuantity: 40,
         attributes: { quantity: 20, unit: 'piezas' }
       }
