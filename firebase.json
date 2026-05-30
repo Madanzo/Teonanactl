@@ -20,6 +20,14 @@
         ],
         "rewrites": [
             {
+                "source": "/api/createPayPalOrder",
+                "function": "createPayPalOrder"
+            },
+            {
+                "source": "/api/capturePayPalOrder",
+                "function": "capturePayPalOrder"
+            },
+            {
                 "source": "**",
                 "destination": "/index.html"
             }
