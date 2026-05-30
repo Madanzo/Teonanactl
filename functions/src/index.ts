@@ -6,7 +6,7 @@ import { products } from './data';
 const corsHandler = cors({ origin: true });
 
 // PayPal environment config
-const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PAYPAL_API_BASE_URL = 'https://api-m.sandbox.paypal.com' } = process.env;
+const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PAYPAL_API_BASE_URL = 'https://api-m.sandbox.paypal.com', PARTNER_PAYPAL_EMAIL } = process.env;
 
 /**
  * Generate an OAuth 2.0 access token for authenticating with PayPal REST APIs.
@@ -74,7 +74,7 @@ export const createPayPalOrder = functions.https.onRequest((req, res) => {
 
       // 3. Create Order
       const url = `${PAYPAL_API_BASE_URL}/v2/checkout/orders`;
-      const payload = {
+      const payload: any = {
         intent: 'CAPTURE',
         purchase_units: [
           {
@@ -86,6 +86,25 @@ export const createPayPalOrder = functions.https.onRequest((req, res) => {
           },
         ],
       };
+
+      // 4. Optionally inject Partner Platform Fee (15% commission split)
+      if (PARTNER_PAYPAL_EMAIL) {
+        const platformFee = Math.round(totalAmount * 0.15 * 100) / 100;
+        payload.purchase_units[0].payment_instruction = {
+          disbursement_mode: 'INSTANT',
+          platform_fees: [
+            {
+              amount: {
+                currency_code: 'MXN',
+                value: platformFee.toFixed(2),
+              },
+              payee: {
+                email_address: PARTNER_PAYPAL_EMAIL,
+              },
+            },
+          ],
+        };
+      }
 
       const response = await axios.post(url, payload, {
         headers: {
